@@ -1,0 +1,107 @@
+.ContatoSection_container{
+    background-color: #fff;
+}
+.ContatoSection_container_detail{
+    max-width: 1280px;
+    margin:0 auto;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+.ContatoSection_main{
+    display:flex;
+    width:100%;
+    padding: 10rem 7.6rem;
+}
+.ContatoSection_left{
+    width:40%;
+    margin-right: 141px;
+    display: flex;
+    /* align-items: center; */
+    flex-direction: column;
+    justify-content: center;
+}
+.ContatoSection_right{
+    width:60%;
+}
+.ContatoSection_right >img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.ContatoSection_content{
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+    line-height: 1.3;
+
+}
+.ContatoSection_title{
+    margin-bottom: 40px;
+}
+.ContatoSection_title_first{
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+.ContatoSection_title_second{
+    display: flex;
+    align-items: center;
+}
+.ContatoSection_title_first_icon,.ContatoSection_title_second_icon{
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:var(--brand-green);
+    margin-right: 10px;
+}
+.ContatoSection_title_first_content,.ContatoSection_title_second_content{
+    font-size: 1rem;
+    font-weight: 400;
+    color:var(--gray-paragraph);
+}
+.ContatoSection_button{
+    font-size: 0.875rem;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 1rem 2rem;
+    background: var(--brand-green);
+    border-radius: 40px;
+    color: #fff;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+}
+.ContatoSection_button:hover{
+    background: var(--brand-green-hover);
+    cursor: pointer;
+    transition-duration: 0.3s;
+    transition-timing-function: linear;
+}
+.ContatoSection_button_icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 1.125rem;
+    font-size: 1rem;
+}
+.ContatoSection_content_button_content{
+    text-transform: uppercase;
+}
+@media screen and (max-width: 768px){
+    .ContatoSection_main{
+        padding:100px 0;
+        flex-direction: column;
+    }
+    .ContatoSection_left,.ContatoSection_right{
+        width: 100%;
+    }
+    .ContatoSection_content{
+        font-size: 1.875rem;
+        line-height: 1.3;
+        inline-size: 300px;
+    }
+    .ContatoSection_button{
+        margin-bottom: 60px;
+    }
+}
