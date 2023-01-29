@@ -1,0 +1,297 @@
+.navbar-container {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  color: var(--brand-green);
+  z-index: 10;
+  background-color: var(--brand-green-light);
+}
+.navbar-container-active{
+  background-color: var(--brand-green);
+}
+.navbar-color-active > span{
+  color:#fff;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+.navbar-color-active > b{
+  color:#fff;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+.navbar-desktop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-left: 12px;
+  padding-right: 12px;
+  height: 72px;
+}
+.navbar-logo > a {
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+.navbar-logo-detail > span {
+  color: var(--gray-headline);
+  font-weight: 500;
+}
+.navbar-logo-detail > b {
+  color: var(--brand-green);
+}
+.navbar-color-active >a {
+  color:#fff !important;
+}
+.navbar-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar-list {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-gap: 10px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin: 0 1rem;
+  cursor: pointer;
+}
+.navbar-list-detail {
+  font-size: 1rem;
+  padding: 0 1rem;
+  font-weight: 400;
+  line-height: 1.3rem;
+  height:72px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar-list-detail:hover{
+    color: var(--brand-green);
+    font-weight: 700;
+    border-bottom: 2px solid rgba(0, 133, 111, 1);
+    transition-duration: 0.2s;
+  transition-timing-function: linear;
+}
+.navbar-list-detail > a {
+  text-decoration: none;
+  color: var(--brand-green);
+}
+.btn-navbar-login {
+  border: 1px solid #00856f;
+  border-radius: 40px;
+  padding: 0.625rem 1.5rem;
+  height:38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar-color-active:first-child:hover{
+  border-bottom: none;
+}
+.navbar-color-active:hover{
+  border-bottom: 2px solid #fff;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+}
+.navbar-color-btn-active  {
+  border: 1px solid #fff;
+  border-radius: 40px;
+  padding: 0.625rem 1.5rem;
+  height:38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar-color-btn-active>a{
+  color:#fff !important;
+}
+.btn-navbar-login:hover{
+  background: #00856F;
+  transition-duration: 0.3s;
+  transition-timing-function: linear;
+}
+.btn-navbar-login:hover a{
+  color:#fff;
+}
+.navbar-color-btn-active:hover{
+  background: #fff;
+  transition-duration: 0.3s;
+  transition-timing-function: linear;
+}
+.navbar-color-btn-active:hover a{
+  color: var(--brand-green) !important;
+}
+.btn-navbar-login > a {
+  color: var(--brand-green);
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+}
+.nav-tab-active{
+    font-weight: 700;
+    border-bottom: 2px solid rgba(0, 133, 111, 1);
+}
+.nav-tab-active-scroll{
+  font-weight: 700;
+  border-bottom: 2px solid #fff;
+}
+.navbar-menu-icon{
+  display:none;
+}
+.navbar-menu-icon-color-active{
+  display: none;
+}
+.inactive{
+  display:none;
+}
+.btn-mobile{
+  display:none;
+}
+.btn-mobile-icon-list{
+  display:none;
+}
+@media screen and (max-width: 960px){
+  .navbar-desktop{
+    background-color: var(--brand-green-light);
+    color:#fff;
+  }
+  .navbar-container-active{
+    background-color: var(--brand-green);
+  }
+  .navbar-desktop.navbar-desktop-btn-active{
+    background-color: var(--brand-green);
+  }
+  .navbar-mobile-active{
+    background-color: var(--brand-green);
+    color:#fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding-left: 12px;
+    padding-right: 12px;
+    height: 72px;
+  }
+  .navbar-mobile-icon-active{
+    background-color: var(--brand-green);
+    color:#fff;
+  }
+  .navbar-logo-detail > b,.navbar-logo-detail > span{
+    color:#fff;
+  }
+  .navbar-color-active > b{
+    color: var(--brand-green);
+  }
+  .navbar-color-active > span{
+    color:#000;
+  }
+  .navbar-menu-icon{
+    display:block;
+    cursor:pointer;
+    font-size: 2rem;
+    position:absolute;
+    right:14px;
+    color: var(--brand-green);
+  }
+  .navbar-menu-icon-color-active{
+    display:block;
+    cursor:pointer;
+    font-size: 2rem;
+    position:absolute;
+    right:14px;
+    color: #fff;
+  }
+  .navbar-logo-detail span {
+    color :#000;
+  }
+  .navbar-logo-detail b {
+        color: var(--brand-green);
+  }
+  .navbar-list{
+    width:100%;
+    height:90vh;
+    display:flex;
+    flex-direction: column;
+    opacity:1;
+    transition: all .5s ease;
+    left: calc(-100vw - 40px);
+    position: absolute;
+    top:71px;
+    background-color: var(--brand-green);
+  }
+  .navbar-list.active{
+    left:0;
+    z-index: 1;
+    margin: 0;
+    height:calc(100vh - 72px);
+  }
+  .navbar-color-span-active{
+    color:#fff !important;
+  }
+  .inactive{
+    display:none;
+  }
+  .navbar-list-detail{
+    height:100%;
+    padding:0;
+  }
+  .navbar-list-detail>a{
+    font-size: 1.5rem;
+    color:#fff;
+  }
+  .nav-tab-active-scroll{
+    font-weight: 700;
+    border-bottom: none;
+  }
+  .navbar-list-detail:hover{
+    border-bottom: none;
+  }
+  .btn-navbar-login{
+    display:none;
+  }
+  .btn-mobile {
+    border: 1px solid #00856f;
+    border-radius: 40px;
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .btn-mobile:hover{
+    background: #00856F;
+    transition-duration: 0.3s;
+    transition-timing-function: linear;
+  }
+  .btn-mobile:hover a{
+    color:#fff;
+  }
+  .btn-mobile > a {
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.125rem;
+    text-transform: uppercase;
+    color: var(--brand-green);
+    padding:1rem 2rem;
+    background-color: #fff;
+    border-radius: 40px;
+  }
+  .btn-mobile-icon-list{
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .btn-mobile-icon{
+    padding:0 1.5rem;
+    font-size: 1.5rem;
+    color:#fff;
+  }
+}
