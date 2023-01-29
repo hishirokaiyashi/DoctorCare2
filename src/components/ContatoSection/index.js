@@ -1,8 +1,9 @@
+// libs
 import React from "react";
-import "./ContatoSection.css";
 import { Icon } from "@iconify/react";
-const ContatoSection = () => {
-  return (
+// styles
+import "./ContatoSection.css";
+const ContatoSection = () => (
     <section className="ContatoSection_container">
       <div className="ContatoSection_container_detail">
         <div className="ContatoSection_main">
@@ -47,6 +48,5 @@ const ContatoSection = () => {
       </div>
     </section>
   );
-};
 
 export default ContatoSection;
