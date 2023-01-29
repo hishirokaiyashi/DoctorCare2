@@ -1,8 +1,8 @@
+// libs
 import React from "react";
+// styles
 import './HeroSection.css'
-import { Icon } from '@iconify/react';
-const HeroSection = () => {
-  return (
+const HeroSection = () => (
     <section className="HeroSection_container">
       <div className="HeroSection_container_detail">
         <div className="HeroSection_container_main">
@@ -21,7 +21,7 @@ const HeroSection = () => {
             </div>
             <div className="HeroSection_left_button">
               <span className="HeroSection_left_button_icon">
-                <Icon icon="el:phone-alt" />
+                <img src="/assets/images/whatsapp2.svg" alt="phone" />
               </span>
               <span className="HeroSection_left_button_content">
                 Agende sua consulta
@@ -61,6 +61,5 @@ const HeroSection = () => {
       </div>
     </section>
   );
-};
 
 export default HeroSection;

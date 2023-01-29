@@ -11,9 +11,7 @@
     display:flex;
     align-items: center;
     height:547px;
-    padding-bottom: 55px;
-    padding-left: 12px;
-    padding-right: 12px;
+    padding:0 12px 55px 12px;
 }
 .HeroSection_left_content{
     font-weight: 700;
@@ -71,7 +69,6 @@
     width:50%;
     display:flex;
     height:100%;
-    /* text-align: center; */
 }
 .HeroSection_right img{
     height: 100%;
@@ -80,7 +77,6 @@
 }
 .HeroSection_bottom_nums{
     position: absolute;
-    /* width:100%; */
     display: flex;
     background-color: var( --brand-beige);
     bottom: -110px;
@@ -93,16 +89,12 @@
     border: 1px solid #DCE9E2;
 }
 .HeroSection_bottom_nums_list {
-  /* height:100%; */
-  /* margin:0 auto; */
-  /* width:calc(100% / 3); */
   flex:1;
   display: flex;
   justify-content: center;
   align-items: center;  
   flex-direction: column;
 }
-
 .HeroSection_bottom_number{
     font-size: 3rem;
     font-weight: 700;
@@ -115,11 +107,7 @@
     font-size: 1rem;
     color:var(--brand-green);
 }
-@media screen and (max-width: 960px){
-
-}
 @media screen and (max-width: 768px){
-
     .HeroSection_container_main{
         flex-direction: column;
         height:100%;
@@ -139,7 +127,6 @@
     }
     .HeroSection_left_SubContent{
         line-height: 1.5;
-
     }
     .HeroSection_bottom_nums{
         flex-direction: column;
@@ -152,7 +139,6 @@
     }
     .HeroSection_bottom_nums_list:first-child, .HeroSection_bottom_nums_list:nth-child(2){
         border-right: none;
-
     }
     .HeroSection_left_button{
         margin: auto;
