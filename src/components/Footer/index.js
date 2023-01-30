@@ -1,17 +1,16 @@
 // libs
-import React from 'react'
-import { Icon } from "@iconify/react";
+import React from "react"
 
 // styles
-import './Footer.css'
+import "./Footer.css"
 
 const Footer = () => (
-    <section className='Footer_container'>
+    <section className="Footer_container">
         <div className="Footer_container_detail">
             <div className="Footer_main">
                 <div className="Footer_left">
                     <span className="Footer_logo">
-                        Doctor<b>Care</b>
+                        <img src="/assets/images/LOGO(FT).svg" alt="LOGO(FT)" />
                     </span>
                     <span className="Footer_subcontent_first">
                         ©2022 - DoctorCare.

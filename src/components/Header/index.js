@@ -1,101 +1,87 @@
 // libs
-import React from 'react'
-import { Icon } from "@iconify/react";
+import React, { useState, useEffect } from "react";
+import classNames from "classnames";
 // styles
-import './Header.css'
-const Header = ({ click, navbar, handleClick }) => {
-    var navbarContainerClass = "navbar-container";
-    var navbarDektopClass = "navbar-desktop";
-    var navbarColorLogo = "";
-    var navbarColorSpan = "";
-    var navbarMenuIconList = "";
-    var navbarListLi = "navbar-list";
-    var navbarLi = "";
-    var btnNavbarLogin = "btn-navbar-login";
-    var navbarLiActive = "navbar-list-detail";
+import "./Header.css"
 
-    if (navbar) {
-        navbarContainerClass += " navbar-container-active";
-        navbarColorLogo = "navbar-color-active";
-        navbarMenuIconList = "navbar-menu-icon-color-active";
-        btnNavbarLogin += " navbar-color-btn-active"
-        navbarLi = "navbar-list-detail navbar-color-active";
-        navbarLiActive += " navbar-color-active nav-tab-active-scroll";
-        if (click) {
-            navbarDektopClass += " navbar-desktop-btn-active";
-            navbarColorSpan = "navbar-color-span-active";
-            navbarListLi += " active";
-        } else {
-            navbarDektopClass += " navbar-desktop-btn-active";
-            navbarColorSpan = "navbar-color-span-active";
-        }
-    } else {
-        navbarColorLogo = "navbar-logo-detail";
-        navbarMenuIconList = "navbar-menu-icon";
-        navbarLi = "navbar-list-detail";
-        navbarLiActive += " nav-tab-active"
-        if (click) {
-            navbarDektopClass += " navbar-desktop-btn-active";
-            navbarColorSpan = "navbar-color-span-active";
-            navbarListLi += " active";
-        }
-    }
+const Header = ({ navbar }) => {
+
+    const [click, setClick] = useState(false);
+    const handleClick = () => setClick(!click);
+
+    const classNavbarContainer = classNames("navbar-container", { "navbar-container-active": navbar });
+    const classNavbarDesktop = classNames("navbar-desktop", {
+        "navbar-desktop-btn-active": (navbar || click)
+    });
+    const classNavbarList = classNames("navbar-list", { "active": click });
+    const classNavbarListDetail = classNames("navbar-list-detail", { "navbar-color-active": navbar })
+    const classNavbarListDetailActive = classNames("navbar-list-detail", { "navbar-color-active": navbar }, { "nav-tab-active-scroll": navbar }, { "nav-tab-active": !navbar })
+    const classNavbarBtnLogin = classNames("btn-navbar-login", { "navbar-color-btn-active": navbar })
 
     return (
         <section>
-            <nav className={navbarContainerClass}>
-                <div className={navbarDektopClass}>
-                    <div className="navbar-logo">
-                        <a href="#" className={navbarColorLogo}>
-                            <span className={navbarColorSpan}>Doctor</span>
-                            <b className={navbarColorSpan}>Care</b>
+            <nav className={classNavbarContainer}>
+                <div className={classNavbarDesktop}>
+                    {!navbar && !click ? (<div className="navbar-logo">
+                        <a href="#" className="navbar-logo">
+                            <img src="/assets/images/Logo.svg" alt="Logo-default" />
                         </a>
-                    </div>
-                    <div className={navbarMenuIconList} onClick={handleClick}>
-                        {!click ? (<Icon icon="heroicons:bars-3-bottom-right" />) : (<Icon icon="ph:x" color="white" />)}
+                    </div>) : ( 
+                        <div className="navbar-logo">
+                            <a href="#" className="navbar-logo">
+                                <img src="/assets/images/Title.svg" alt="Logo-default" />
+                            </a>
+                        </div>
+                    )}
+                    <div className="navbar-menu-icon" onClick={handleClick}>
+                        {!click ? (
+                            navbar ? (<img src="/assets/images/Group 30(1).svg" alt="Menu" />)
+                                : (<img src="/assets/images/Group 30.svg" alt="Menu" />)
+                        ) : (<img src="/assets/images/Vector1.svg" alt="X" />
+                        )}
                     </div>
                     <div className="navbar-items">
-                        <ul className={navbarListLi}>
-                            <li className={navbarLiActive}>
+                        <ul className={classNavbarList}>
+                            <li className={classNavbarListDetailActive}>
                                 <a href="#" >
                                     Início
                                 </a>
                             </li>
-                            <li className={navbarLi}>
+                            <li className={classNavbarListDetail}>
                                 <a href="#" >
                                     Sobre
                                 </a>
                             </li>
-                            <li className={navbarLi}>
+                            <li className={classNavbarListDetail}>
                                 <a href="#" >
                                     Serviços
                                 </a>
                             </li>
-                            <li className={navbarLi}>
+                            <li className={classNavbarListDetail}>
                                 <a href="#">
                                     Depoimentos
                                 </a>
                             </li>
-
-                            {click && <li className="btn-mobile">
-                                <a href="#">Agendar consulta</a>
-                            </li>}
-                            {click &&
+                            {click && <>
+                                <li className="btn-mobile">
+                                    <a href="#">Agendar consulta</a>
+                                </li>
                                 <li className="btn-mobile-icon-list">
                                     <span className="btn-mobile-icon">
-                                        <img src="/assets/images/instagram 1.svg" alt="icon-IG" />
+                                        <img src="/assets/images/instagram 1.svg" alt="IG" />
                                     </span>
                                     <span className="btn-mobile-icon">
-                                        <img src="/assets/images/facebook 1.svg" alt="icon-FB" />
+                                        <img src="/assets/images/facebook 1.svg" alt="FB" />
                                     </span >
                                     <span className="btn-mobile-icon">
-                                        <img src="/assets/images/youtube 1.svg" alt="icon-YT" />
+                                        <img src="/assets/images/youtube 1.svg" alt="YT" />
                                     </span>
                                 </li>
+                            </>
                             }
                         </ul>
                     </div>
-                    <div className={btnNavbarLogin}>
+                    <div className={classNavbarBtnLogin}>
                         <a href="#">Agendar consulta</a>
                     </div>
                 </div>

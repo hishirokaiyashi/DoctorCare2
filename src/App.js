@@ -1,10 +1,9 @@
-import logo from './logo.svg';
+// styles
 import './App.css';
+// components
 import Nav from "../src/components/Nav"
 import Footer from "./components/Footer"
 
-
-import "@fontsource/dm-sans"
 function App() {
   return (
     <div className="App">
