@@ -115,10 +115,7 @@
         text-align: center;
         height:1080px;
     }
-    .HeroSection_left{
-        width: 100%;
-    }
-    .HeroSection_right{
+    .HeroSection_left,.HeroSection_right{
         width: 100%;
     }
     .HeroSection_left_title{

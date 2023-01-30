@@ -2,6 +2,7 @@
 import React from "react";
 // styles
 import './HeroSection.css'
+
 const HeroSection = () => (
     <section className="HeroSection_container">
       <div className="HeroSection_container_detail">
