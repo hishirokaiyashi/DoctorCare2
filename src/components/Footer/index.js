@@ -1,8 +1,9 @@
 // libs
 import React from "react"
-
 // styles
 import "./Footer.css"
+// others
+import { iconFooter } from "../../dataSources/iconFooter"
 
 const Footer = () => (
     <section className="Footer_container">
@@ -20,15 +21,13 @@ const Footer = () => (
                     </span>
                 </div>
                 <div className="Footer_right">
-                    <span className="Footer_right-icon">
-                        <img src="/assets/images/instagram 1.svg" alt="icon-IG" />
-                    </span>
-                    <span className="Footer_right-icon">
-                        <img src="/assets/images/facebook 1.svg" alt="icon-FB" />
-                    </span >
-                    <span className="Footer_right-icon">
-                        <img src="/assets/images/youtube 1.svg" alt="icon-YT" />
-                    </span>
+                    {
+                        iconFooter.map((item) => (
+                            <span className="Footer_right-icon">
+                                <img src={item.src} alt={item.alt} />
+                            </span>
+                        ))
+                    }
                 </div>
             </div>
         </div>
