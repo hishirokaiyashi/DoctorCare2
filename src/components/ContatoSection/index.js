@@ -1,7 +1,12 @@
 // libs
 import React from "react";
+//components
+import Button from "../Button";
 // styles
 import "./ContatoSection.css";
+//others
+import { contatoData } from "../../dataSources/contatoData"
+
 const ContatoSection = () => (
   <section className="ContatoSection_container">
     <div className="ContatoSection_container_detail">
@@ -11,31 +16,21 @@ const ContatoSection = () => (
             Entre em contato com a gente!
           </p>
           <div className="ContatoSection_title">
-            <div className="ContatoSection_title_first">
-              <span className="ContatoSection_title_first_icon">
-                <img src="/assets/images/map-pin 1.svg" alt="map" />
-              </span>
-              <span className="ContatoSection_title_first_content">
-                R. Amauri Souza, 346
-              </span>
-            </div>
-            <div className="ContatoSection_title_second">
-              <span className="ContatoSection_title_second_icon">
-                <img src="/assets/images/mail 1.svg" alt="mail" />
-
-              </span>
-              <span className="ContatoSection_title_second_content">
-                contato@doctorcare.com
-              </span>
-            </div>
+              {
+                contatoData.map((item,index) => (
+                  <div key={index} className="ContatoSection_title_first">
+                    <span className="ContatoSection_title_first_icon">
+                      <img src={item.src} alt={item.alt} />
+                    </span>
+                    <span className="ContatoSection_title_first_content">
+                      {item.title}
+                    </span>
+                  </div>
+                ))
+              }
           </div>
           <div className="ContatoSection_button">
-            <span className="ContatoSection_button_icon">
-              <img src="/assets/images/whatsapp1.svg" alt="mail" className="btn-mail"/>
-            </span>
-            <span className="ContatoSection_content_button_content">
-              Agende sua consulta
-            </span>
+            <Button />
           </div>
         </div>
         <div className="ContatoSection_right">
