@@ -55,16 +55,6 @@
     transition-duration: 0.3s;
     transition-timing-function: linear;
 }
-.HeroSection_left_button_icon{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-right:1.125rem;
-    font-size:1rem;
-}
-.HeroSection_left_button_content{
-    text-transform: uppercase;
-}
 .HeroSection_right {
     width:50%;
     display:flex;
@@ -88,20 +78,10 @@
     border-radius: 6px;
     border: 1px solid #DCE9E2;
 }
-.HeroSection_bottom_nums_list {
-  flex:1;
-  display: flex;
-  justify-content: center;
-  align-items: center;  
-  flex-direction: column;
-}
 .HeroSection_bottom_number{
     font-size: 3rem;
     font-weight: 700;
     color: #212529;
-}
-.HeroSection_bottom_nums_list:first-child,.HeroSection_bottom_nums_list:nth-child(2){
-    border-right:1px solid var(--brand-green);
 }
 .HeroSection_bottom_title{
     font-size: 1rem;
@@ -130,18 +110,6 @@
         height:470px;
         padding:2.5rem 5rem;
         bottom:-235px;
-    }
-    .HeroSection_bottom_nums_list{
-        width: 100%;
-    }
-    .HeroSection_bottom_nums_list:first-child, .HeroSection_bottom_nums_list:nth-child(2){
-        border-right: none;
-    }
-    .HeroSection_left_button{
-        margin: auto;
-    }
-    .HeroSection_bottom_nums_list:first-child, .HeroSection_bottom_nums_list:nth-child(2){
-        margin-bottom: 3.75rem;
     }
     .HeroSection_bottom_number{
         margin-bottom: 4px;

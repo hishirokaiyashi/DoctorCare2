@@ -1,0 +1,24 @@
+.HeroSection_bottom_nums_list {
+    flex:1;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    flex-direction: column;
+  }
+.HeroSection_bottom_nums_list:first-child,.HeroSection_bottom_nums_list:nth-child(2){
+    border-right:1px solid var(--brand-green);
+}
+@media screen and (max-width: 768px){
+    .HeroSection_bottom_nums_list{
+        width: 100%;
+    }
+    .HeroSection_bottom_nums_list:first-child, .HeroSection_bottom_nums_list:nth-child(2){
+        border-right: none;
+    }
+    .HeroSection_left_button{
+        margin: auto;
+    }
+    .HeroSection_bottom_nums_list:first-child, .HeroSection_bottom_nums_list:nth-child(2){
+        margin-bottom: 3.75rem;
+    }
+}
