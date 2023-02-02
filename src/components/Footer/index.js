@@ -22,8 +22,8 @@ const Footer = () => (
                 </div>
                 <div className="Footer_right">
                     {
-                        iconFooter.map((item) => (
-                            <span className="Footer_right-icon">
+                        iconFooter.map((item,index) => (
+                            <span className="Footer_right-icon" key={index}>
                                 <img src={item.src} alt={item.alt} />
                             </span>
                         ))

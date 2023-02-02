@@ -3,6 +3,9 @@ import React, { useState, useEffect } from "react";
 import classNames from "classnames";
 // styles
 import "./Header.css"
+// others
+import { iconFooter } from "../../dataSources/iconFooter"
+import { titleHeader } from "../../dataSources/titleHeader"
 
 const Header = ({ navbar }) => {
 
@@ -26,7 +29,7 @@ const Header = ({ navbar }) => {
                         <a href="#" className="navbar-logo">
                             <img src="/assets/images/Logo.svg" alt="Logo-default" />
                         </a>
-                    </div>) : ( 
+                    </div>) : (
                         <div className="navbar-logo">
                             <a href="#" className="navbar-logo">
                                 <img src="/assets/images/Title.svg" alt="Logo-default" />
@@ -42,40 +45,25 @@ const Header = ({ navbar }) => {
                     </div>
                     <div className="navbar-items">
                         <ul className={classNavbarList}>
-                            <li className={classNavbarListDetailActive}>
-                                <a href="#" >
-                                    Início
-                                </a>
-                            </li>
-                            <li className={classNavbarListDetail}>
-                                <a href="#" >
-                                    Sobre
-                                </a>
-                            </li>
-                            <li className={classNavbarListDetail}>
-                                <a href="#" >
-                                    Serviços
-                                </a>
-                            </li>
-                            <li className={classNavbarListDetail}>
-                                <a href="#">
-                                    Depoimentos
-                                </a>
-                            </li>
+                            {
+                                titleHeader.map((item, index) => (
+                                    <li className={index==0 ? classNavbarListDetailActive :classNavbarListDetail } key={index}>
+                                        <a href="#">{item.title}</a>
+                                    </li>
+                                ))
+                            }
                             {click && <>
                                 <li className="btn-mobile">
                                     <a href="#">Agendar consulta</a>
                                 </li>
                                 <li className="btn-mobile-icon-list">
-                                    <span className="btn-mobile-icon">
-                                        <img src="/assets/images/instagram 1.svg" alt="IG" />
-                                    </span>
-                                    <span className="btn-mobile-icon">
-                                        <img src="/assets/images/facebook 1.svg" alt="FB" />
-                                    </span >
-                                    <span className="btn-mobile-icon">
-                                        <img src="/assets/images/youtube 1.svg" alt="YT" />
-                                    </span>
+                                    {
+                                        iconFooter.map((item, index) => (
+                                            <span className="btn-mobile-icon" key={index}>
+                                                <img src={item.src} alt={item.alt} />
+                                            </span>
+                                        ))
+                                    }
                                 </li>
                             </>
                             }
