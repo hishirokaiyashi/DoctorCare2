@@ -8,6 +8,15 @@
 .HeroSection_bottom_nums_list:first-child,.HeroSection_bottom_nums_list:nth-child(2){
     border-right:1px solid var(--brand-green);
 }
+.HeroSection_bottom_number{
+    font-size: 3rem;
+    font-weight: 700;
+    color: #212529;
+}
+.HeroSection_bottom_title{
+    font-size: 1rem;
+    color:var(--brand-green);
+}
 @media screen and (max-width: 768px){
     .HeroSection_bottom_nums_list{
         width: 100%;
@@ -20,5 +29,16 @@
     }
     .HeroSection_bottom_nums_list:first-child, .HeroSection_bottom_nums_list:nth-child(2){
         margin-bottom: 3.75rem;
+    }
+    .HeroSection_bottom_number{
+        font-size: 3.8rem;
+    }
+    .HeroSection_bottom_title{
+        font-size: 1.4rem;
+    }
+}
+@media screen and (max-width: 599px){
+    .HeroSection_bottom_title{
+        font-size: 1rem;
     }
 }

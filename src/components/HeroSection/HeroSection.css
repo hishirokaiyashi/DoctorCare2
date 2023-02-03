@@ -78,14 +78,20 @@
     border-radius: 6px;
     border: 1px solid #DCE9E2;
 }
-.HeroSection_bottom_number{
-    font-size: 3rem;
-    font-weight: 700;
-    color: #212529;
-}
-.HeroSection_bottom_title{
-    font-size: 1rem;
-    color:var(--brand-green);
+
+@media screen and (max-width: 1024px){
+    .HeroSection_left_title{
+        font-size: 2.5rem;
+    }
+    .HeroSection_left_SubContent{
+        font-size: 0.9rem;
+    }
+    .HeroSection_left{
+        width:60%;
+    }
+    .HeroSection_right {
+        width:40%;
+    }
 }
 @media screen and (max-width: 768px){
     .HeroSection_container_main{
@@ -94,6 +100,11 @@
         padding-top:2.5rem;
         text-align: center;
         height:1080px;
+    }
+    .HeroSection_right img {
+        height: 90%;
+        width: 80%;
+        object-fit: contain;
     }
     .HeroSection_left,.HeroSection_right{
         width: 100%;
@@ -109,7 +120,7 @@
         flex-direction: column;
         height:470px;
         padding:2.5rem 5rem;
-        bottom:-235px;
+        bottom:-266px;
     }
     .HeroSection_bottom_number{
         margin-bottom: 4px;
@@ -122,5 +133,55 @@
     }
     .ServicosSection_top_title{
         font-size: 1.875rem;
+    }
+}
+@media screen and (max-width: 599px){
+    .HeroSection_container_main{
+        flex-direction: column;
+        height:100%;
+        padding-top:2.5rem;
+        text-align: center;
+        height:1080px;
+    }
+    .HeroSection_right img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+    }
+    .HeroSection_left,.HeroSection_right{
+        width: 100%;
+    }
+    .HeroSection_left_title{
+        font-size: 2.125rem;
+        line-height: 1.5;
+    }
+    .HeroSection_left_SubContent{
+        line-height: 1.5;
+    }
+    .HeroSection_bottom_nums{
+        flex-direction: column;
+        height:470px;
+        padding:2.5rem 5rem;
+        bottom:-187px;
+    }
+    .HeroSection_bottom_number{
+        margin-bottom: 4px;
+    }
+    .HeroSection_right{
+        justify-content: center;
+        height:fit-content;
+        margin-top: 2.3rem;
+        width:80%;
+    }
+    .ServicosSection_top_title{
+        font-size: 1.875rem;
+    }
+}
+@media screen and (max-width: 368px){
+    .HeroSection_bottom_nums{
+        bottom:-180px;
+    }
+    .HeroSection_bottom_title{
+        font-size: 0.8rem;
     }
 }
