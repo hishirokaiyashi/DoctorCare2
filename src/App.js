@@ -1,19 +1,18 @@
-import logo from './logo.svg';
+// styles
 import './App.css';
-// import Nav from './components/Nav';
-// import HeroSection from './components/HeroSection';
-// import ServicosSection from './components/ServicosSection';
-// import SobreSection from './components/SobreSection';
+// components
 import ContatoSection from './components/ContatoSection';
-// import Footer from './components/Footer';
-
+import Nav from "../src/components/Nav"
+import Footer from "./components/Footer"
+// others
 import "@fontsource/dm-sans"
+
 function App() {
   return (
     <div className="App">
-
       <ContatoSection/>
-
+      <Nav/>
+      <Footer/>
     </div>
   );
 }
