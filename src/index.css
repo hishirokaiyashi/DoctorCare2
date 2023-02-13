@@ -11,3 +11,6 @@
   --gray-paragraph:#384633;
   --white: #3E3E3E;
 }
+a, span, b {
+  text-decoration: none;
+}
