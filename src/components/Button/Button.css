@@ -1,0 +1,10 @@
+.HeroSection_button_icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right:1.125rem;
+    font-size:1rem;
+}
+.HeroSection_button_content{
+    text-transform: uppercase;
+}
