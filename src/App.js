@@ -1,6 +1,7 @@
 // styles
 import './App.css';
 // components
+import SobreSection from './components/SobreSection';
 import HeroSection from './components/HeroSection';
 import Nav from "../src/components/Nav"
 import ServicosSection from './components/ServicosSection';
@@ -12,6 +13,7 @@ function App() {
       <Nav/>
       <HeroSection/>
       <ServicosSection/>
+      <SobreSection/>
       <Footer/>
     </div>
   );
